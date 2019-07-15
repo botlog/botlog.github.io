@@ -7,8 +7,11 @@ use-site-title: true
 
 <div class="container-fluid" style="margin: 0% 05% 0% 05%">
 <div class="col-sm-12 col-sm-offset-0">
+
 <!--    <div class="row text-center"><br> -->
       <div class="row"><br> 
+
+      {% for post in paginator.posts %}
         <div class="col-md-4 col-sm-4">
 
            <div class="card"> 
@@ -19,24 +22,7 @@ use-site-title: true
               </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-4">
-           <div class="card"> 
-              <div class="card-body">
-                <h4 class="card-title"><a>Card title</a></h4>
-                <p class="card-text" style="align=left">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">[Read&nbsp;More]</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-4">
-           <div class="card" style = "border=1px"> 
-              <div class="card-body">
-                <h4 class="card-title"><a>Card title</a></h4>
-                <p class="card-text" style="align=left">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">[Read&nbsp;More]</a>
-              </div>
-            </div>
-        </div>
+       {% endfor %}
     </div>
 </div>
 </div>
@@ -57,7 +43,6 @@ use-site-title: true
     <p class="post-meta">
       Posted on {{ post.date | date: "%B %-d, %Y" }}
     </p>
-
     <div class="post-entry-container">
       <div class="post-entry">
         {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
@@ -67,7 +52,6 @@ use-site-title: true
         {% endif %}
       </div>
     </div>
-
    </article>
   {% endfor %}
 </div>
