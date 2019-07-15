@@ -16,7 +16,7 @@ use-site-title: true
           <h4 class="card-title"><a>{{ post.title }}</a></h4>
         </div>
         <div class="card-body" style="max-height: 200px;!important margin-top: -00px; color:#000000" >
-          <p class="card-text" style="max-height: 200px;!important; font-size:14px; margin: -2px 2px 0 2px;  min-height: 80px;!important" >
+          <p class="card-text" style="max-height: 200px;!important; font-size:14px; margin: -2px 3px 0 3px;  min-height: 80px;!important" >
                {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
                {% assign excerpt_word_count = post.excerpt | number_of_words %}
                {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
@@ -27,7 +27,6 @@ use-site-title: true
         <div class="form-row text-center" style="margin-bottom: 10px;">
         <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm">[Read&nbsp;More]</a>
         </div>
-
       </div>
     </div>
   </div>
@@ -75,11 +74,13 @@ use-site-title: true
   {% if paginator.previous_page %}
   <li class="previous">
     <a href="{{ paginator.previous_page_path | relative_url }}">&larr;Newer</a>
+    <a href="{{ post.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
   </li>
   {% endif %}
   {% if paginator.next_page %}
   <li class="next">
     <a href="{{ paginator.next_page_path | relative_url }}">Older&rarr;</a>
+    <a href="{{ paginator.next_page_path | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
   </li>
   {% endif %}
 </ul>
