@@ -22,9 +22,9 @@ use-site-title: true
                {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
                {% endif %}
          </p>
-         <p style="color:#cecece!important; font-size:10px" >
-          Posted on {{ post.date | date: "%B %-d, %Y" }}
-        </p>
+
+
+      <p class="card-text"><small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small></p>
         <a href="{{ post.url | relative_url }}" class="btn btn-primary">[Read&nbsp;More]</a>
       </div>
     </div>
