@@ -16,7 +16,7 @@ use-site-title: true
           <h4 class="card-title"><a>{{ post.title }}</a></h4>
         </div>
         <div class="card-body" style="max-height: 300px;!important margin-top: -00px; color:#000000" >
-          <p class="card-text" style="max-height: 300px;!important; margin-top: -7px;  min-height: 110px;!important" >
+          <p class="card-text" style="max-height: 300px;!important; margin-top: -2px;  min-height: 110px;!important" >
                {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
                {% assign excerpt_word_count = post.excerpt | number_of_words %}
                {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
@@ -27,7 +27,7 @@ use-site-title: true
 
         <div class="form-row text-center">
 
-        <a href="{{ post.url | relative_url }}" class="btn btn-primary center-block">[Read&nbsp;More]</a>
+        <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm center-block">[Read&nbsp;More]</a>
         </div>
       </div>
     </div>
