@@ -786,3 +786,26 @@ pre {
   font-style: italic;
   font-size: 16px;
 }
+
+.teaser {
+    font-family: 'Source Sans Pro',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: #fff;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.04);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.04);
+    min-height: 200px;
+    min-width: 200px;
+    overflow: hidden;
+    padding: 1.2rem;
+    position: relative;
+    -webkit-transition: -webkit-box-shadow .3s;
+    transition: -webkit-box-shadow .3s;
+    transition: box-shadow .3s;
+    transition: box-shadow .3s,-webkit-box-shadow .3s;
+    width: 100%;
+}
+
