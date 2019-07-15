@@ -43,6 +43,11 @@ use-site-title: true
 <!-- Card -->
 
 <div class="posts-list">
+
+
+<div class="container-fluid" style="margin: 0% 5% 0% 5%">
+<div class="col-sm-12 col-sm-offset-0">
+
   {% for post in paginator.posts %}
   <article class="post-preview">
     <a href="{{ post.url | relative_url }}">
@@ -92,6 +97,10 @@ use-site-title: true
    </article>
   {% endfor %}
 </div>
+</div>
+</div>
+
+
 
 {% if paginator.total_pages > 1 %}
 <ul class="pager main-pager">
