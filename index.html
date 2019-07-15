@@ -17,7 +17,7 @@ use-site-title: true
           <h4 class="card-title"><a>{{ post.title }}</a></h4>
           <hr>
         </div>
-        <div class="card-body">
+        <div class="card-body" style="height:80px" >
           <p class="card-text" style="align=left;height:90px!important">
                {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
                {% assign excerpt_word_count = post.excerpt | number_of_words %}
