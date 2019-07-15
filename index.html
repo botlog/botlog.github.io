@@ -12,13 +12,6 @@ use-site-title: true
       {% for post in paginator.posts %}
       <div class="col-md-4 col-sm-4">
        <div class="card" style="border:1px solid rgba(0,0,0,.125);background-clip:border-box;">
-
-<div class="card-header">
-
-<p class="text-success">Success.</p>
-This is a Card Header
-</div>
-
         <div class="card-body">
           <h4 class="card-title"><a>{{ post.title }}</a></h4>
           <p class="card-text" style="align=left">
@@ -27,7 +20,7 @@ This is a Card Header
                {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
                {% endif %}
          </p>
-         <p class="post-meta">
+         <p class="text-black-50">
           Posted on {{ post.date | date: "%B %-d, %Y" }}
         </p>
         <a href="{{ post.url | relative_url }}" class="btn btn-primary">[Read&nbsp;More]</a>
