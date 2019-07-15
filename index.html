@@ -6,46 +6,37 @@ use-site-title: true
 ---
 
 <div class="container-fluid" style="margin: 0% 05% 0% 05%">
-<div class="col-sm-12 col-sm-offset-0">
-
-<!--    <div class="row text-center"><br> -->
-      <div class="row"><br> 
+  <div class="col-sm-12 col-sm-offset-0">
+    <div class="row"><br>
 
       {% for post in paginator.posts %}
-        <div class="col-md-4 col-sm-4">
-           <div class="card"> 
-              <div class="card-body">
-                <h4 class="card-title"><a>{{ post.title }}</a></h4>
-                <p class="card-text" style="align=left">
-                
-                
-                quick example text to build on the card title and make up the bulk of the card's content.
-                
-                    <div class="post-entry-container">
-                   <div class="post-entry">
-                     {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
-                     {% assign excerpt_word_count = post.excerpt | number_of_words %}
-                     {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
-                     {% endif %}
-                   </div>
-                 </div>
-
-                
-                
-                </p>
-                    <p class="post-meta">
-                      Posted on {{ post.date | date: "%B %-d, %Y" }}
-                    </p>
-
-                    <a href="{{ post.url | relative_url }}" class="btn btn-primary">[Read&nbsp;More]</a>
-
-              </div>
-            </div>
-        </div>
-       {% endfor %}
+      <div class="col-md-4 col-sm-4">
+       <div class="card">
+        <div class="card-body">
+          <h4 class="card-title"><a>{{ post.title }}</a></h4>
+          <p class="card-text" style="align=left">
+            <div class="post-entry-container">
+             <div class="post-entry">
+               {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
+               {% assign excerpt_word_count = post.excerpt | number_of_words %}
+               {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
+               {% endif %}
+             </div>
+           </div>
+         </p>
+         <p class="post-meta">
+          Posted on {{ post.date | date: "%B %-d, %Y" }}
+        </p>
+        <a href="{{ post.url | relative_url }}" class="btn btn-primary">[Read&nbsp;More]</a>
+      </div>
     </div>
+  </div>
+  {% endfor %}
 </div>
 </div>
+</div>
+
+
 
 <div class="posts-list">
 <div class="container-fluid" style="margin: 0% 5% 0% 5%">
