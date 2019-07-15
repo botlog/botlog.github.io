@@ -15,7 +15,7 @@ use-site-title: true
        <div class="card-header" style="min-height: 40px;!important">
           <h4 class="card-title"><a>{{ post.title }}</a></h4>
         </div>
-        <div class="card-body" style="max-height: 400px;!important" >
+        <div class="card-body" style="max-height: 200px;!important" >
           <small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small>
           <p class="card-text" style="min-height: 120px;!important">
                {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
