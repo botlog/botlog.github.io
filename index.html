@@ -13,6 +13,9 @@ use-site-title: true
       {% for post in paginator.posts %}
       <div class="col-md-4 col-sm-4">
        <div class="card" style="border:1px solid rgba(0,0,0,.125);">
+       <div class="card-header">
+          <h4 class="card-title"><a>{{ post.title }}</a></h4>
+        </div>
         <div class="card-body">
           <h4 class="card-title"><a>{{ post.title }}</a></h4>
           <hr>
