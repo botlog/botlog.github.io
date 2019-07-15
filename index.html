@@ -12,11 +12,11 @@ use-site-title: true
       {% for post in paginator.posts %}
       <div class="col-md-4 col-sm-4">
        <div class="card" style="border:1px solid rgba(0,0,0,.125);">
-       <div class="card-header center" style="min-height: 40px;!important">
-          <h4 class="card-title "><a>{{ post.title }}</a></h4>
+       <div class="card-header" style="min-height: 40px;!important; text-align:center">
+          <h4 class="card-title"><a>{{ post.title }}</a></h4>
         </div>
         <div class="card-body" style="max-height: 300px;!important margin-top: -00px; color:#000000" >
-          <p class="card-text" style="max-height: 300px;!important; font-size:12px;margin-top: -2px;  min-height: 110px;!important" >
+          <p class="card-text" style="max-height: 300px;!important; font-size:14px;margin-top: -2px;  min-height: 110px;!important" >
                {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
                {% assign excerpt_word_count = post.excerpt | number_of_words %}
                {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
