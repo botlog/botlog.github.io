@@ -13,9 +13,8 @@ use-site-title: true
       {% for post in paginator.posts %}
       <div class="col-md-4 col-sm-4">
        <div class="card" style="border:1px solid rgba(0,0,0,.125);">
-       <div class="card-header" style="min-height: 100px;!important">
+       <div class="card-header" style="min-height: 80px;!important">
           <h4 class="card-title"><a>{{ post.title }}</a></h4>
-          <hr>
         </div>
         <div class="card-body" style="min-height: 400px;!important" >
           <small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small>
