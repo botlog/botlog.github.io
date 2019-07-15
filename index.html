@@ -17,27 +17,53 @@ use-site-title: true
           <h4 class="card-title"><a>{{ post.title }}</a></h4>
           <hr>
         </div>
-        <div class="card-body" style="height:40px" >
+        <div class="card-body" style="height:10px" >
           <p class="card-text" style="align=left;height:220px!important">
                {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
                {% assign excerpt_word_count = post.excerpt | number_of_words %}
                {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
                {% endif %}
          </p>
-
-
       <p class="card-text"><small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small></p>
         <a href="{{ post.url | relative_url }}" class="btn btn-primary">[Read&nbsp;More]</a>
       </div>
     </div>
   </div>
   {% endfor %}
+  <hr>
 </div>
 </div>
 </div>
 </div>
 
 <hr>
+
+
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
 
 
 
