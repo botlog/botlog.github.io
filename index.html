@@ -17,6 +17,7 @@ use-site-title: true
         </div>
         <div class="card-body" style="max-height: 300px;!important color:#ff0000" >
           <small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small>
+          <hr>
           <p class="card-text" style="max-height: 300px;!important">
                {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
                {% assign excerpt_word_count = post.excerpt | number_of_words %}
