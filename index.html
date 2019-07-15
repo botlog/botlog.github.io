@@ -18,9 +18,7 @@ use-site-title: true
           <hr>
         </div>
         <div class="card-body" style="" >
-
-          <p class="card-text"><small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small></p>
-
+          <small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small>
           <p class="card-text" style="align=left;">
                {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
                {% assign excerpt_word_count = post.excerpt | number_of_words %}
@@ -42,40 +40,17 @@ use-site-title: true
 
 <hr>
 
+<div style="">
+
 <div class="container-fluid" style="margin: 0% 05% 0% 05%">
   <div class="col-sm-12 col-sm-offset-0">
     <div class="row"><br>
 
-<div class="card-group">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">It's a broader card with.</p>
-      <p class="card-text"><small class="text-muted">Last mins ago</small></p>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text .</p>
-      <p class="card-text"><small class="text-muted">Last </small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">It's a broader  </p>
-      <p class="card-text"><small class="text-muted">Lmins ago</small></p>
-    </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
 
-
+</div>
 
 {% if paginator.total_pages > 1 %}
 <ul class="pager main-pager">
