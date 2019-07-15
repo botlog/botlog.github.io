@@ -70,6 +70,12 @@ use-site-title: true
 
 {% if paginator.total_pages > 1 %}
   {% if paginator.previous_page %}
+
+        <div class="form-row text-center" style="margin-bottom: 10px;">
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="btn btn-primary btn-sm">[Read&nbsp;More]</a>
+        </div>
+
+
     <a href="{{ paginator.previous_page_path | relative_url }}">&larr;Newer</a>
     <a href="{{ post.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
   {% endif %}
