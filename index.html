@@ -13,12 +13,11 @@ use-site-title: true
       {% for post in paginator.posts %}
       <div class="col-md-4 col-sm-4">
        <div class="card" style="border:1px solid rgba(0,0,0,.125);">
-       <div class="card-header">
-          <h4 class="card-title"><a>{{ post.title }}</a></h4>
-        </div>
-        <div class="card-body">
+       <div class="card-header" style="height:40px">
           <h4 class="card-title"><a>{{ post.title }}</a></h4>
           <hr>
+        </div>
+        <div class="card-body">
           <p class="card-text" style="align=left;height:90px!important">
                {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
                {% assign excerpt_word_count = post.excerpt | number_of_words %}
@@ -39,46 +38,6 @@ use-site-title: true
 </div>
 
 <hr>
-
-<div class="container-fluid" style="margin: 0% 05% 0% 05%">
-  <div class="col-sm-12 col-sm-offset-0">
-    <div class="row"><br>
-
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card It's a broader card with text below as a natural lead-in to extra content. This content is a little longer. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-
-  </div>
-  </div>
-  </div>
-
-  <hr>
-
-
-
-
 
 
 
