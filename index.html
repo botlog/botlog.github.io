@@ -16,7 +16,25 @@ use-site-title: true
            <div class="card"> 
               <div class="card-body">
                 <h4 class="card-title"><a>{{ post.title }}</a></h4>
-                <p class="card-text" style="align=left">quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text" style="align=left">
+                
+                
+                
+                quick example text to build on the card title and make up the bulk of the card's content.
+                
+                    <div class="post-entry-container">
+                   <div class="post-entry">
+                     {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
+                     {% assign excerpt_word_count = post.excerpt | number_of_words %}
+                     {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
+                       <a href="{{ post.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
+                     {% endif %}
+                   </div>
+                 </div>
+
+                
+                
+                </p>
                     <p class="post-meta">
                       Posted on {{ post.date | date: "%B %-d, %Y" }}
                     </p>
