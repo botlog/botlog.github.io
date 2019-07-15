@@ -17,7 +17,7 @@ use-site-title: true
           <h4 class="card-title"><a>{{ post.title }}</a></h4>
           <hr>
         </div>
-        <div class="card-body" style="" >
+        <div class="card-body" style="min-height: 400px;!important" >
           <small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small>
           <p class="card-text" style="align=left;">
                {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
