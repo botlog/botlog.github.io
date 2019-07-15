@@ -21,14 +21,13 @@ use-site-title: true
                {% assign excerpt_word_count = post.excerpt | number_of_words %}
                {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
                {% endif %}
-                <a href="{{ post.url | relative_url }}">+</a>
          </p>
       <p class="card-text" style="margin-top: -7px;" ><small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small></p>
 
         <div class="form-row text-center">
-
-        <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm center-block">[Read&nbsp;More]</a>
+        <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm">[Read&nbsp;More]</a>
         </div>
+
       </div>
     </div>
   </div>
