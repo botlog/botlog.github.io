@@ -10,7 +10,7 @@ use-site-title: true
     <div class="row"><br>
 
       {% for post in paginator.posts %}
-      <div class="col-md-4 col-sm-4" style="background-color: red;">
+      <div class="col-md-4 col-sm-4" style="background-color: white;">
        <div class="card" style="border:1px solid rgba(0,0,0,.125); background-color: #d3d3d3; ">
        <div class="card-header" style="min-height: 40px;!important; text-align:center">
           <h4 class="card-title"><a>{{ post.title }}</a></h4>
@@ -22,7 +22,7 @@ use-site-title: true
                {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
                {% endif %}
          </p>
-      <p class="card-text" style="margin-top: -7px; text-align:center" ><small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small></p>
+      <p class="card-text" style="margin-top: -7px; text-align:center;  font-size:12px;" ><small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small></p>
 
         <div class="form-row text-center" style="margin-bottom: 10px;">
         <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm">[Read&nbsp;More]</a>
