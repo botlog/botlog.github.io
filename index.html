@@ -47,6 +47,8 @@ use-site-title: true
   {% endif %}
   {% if paginator.next_page %}
   <li class="next">
+  {% assign new_title = paginator.next_page_path| append: "#news" %}
+    <h1>{{ new_title }}</h1>
     <a href="{{ paginator.next_page_path | relative_url }}">Older Posts &rarr;</a>
   </li>
   {% endif %}
@@ -120,3 +122,8 @@ use-site-title: true
   {% endif %}
 </ul>
 {% endif %}
+
+
+teste2
+
+<p id="news">Hyperlinks are utilized by a web browser to move from one page to another...</p>
