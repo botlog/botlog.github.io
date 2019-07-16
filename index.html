@@ -36,6 +36,26 @@ use-site-title: true
 </div>
 </div>
 
+{% if paginator.total_pages > 1 %}
+<ul class="pager main-pager">
+  {% if paginator.previous_page %}
+  <li class="previous1">
+    <a href="{{ paginator.previous_page_path | relative_url }}">&larr;Newer</a>
+    <a href="{{ post.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
+  </li>
+  {% endif %}
+  {% if paginator.next_page %}
+  <li class="next1">
+    <a href="{{ paginator.next_page_path | relative_url }}">Older&rarr;</a>
+    <a href="{{ paginator.next_page_path | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
+
+
+
+
 <hr>
 
 
@@ -66,23 +86,6 @@ use-site-title: true
 </div>
 </div>
 </div>
-
-{% if paginator.total_pages > 1 %}
-<ul class="pager main-pager">
-  {% if paginator.previous_page %}
-  <li class="previous1">
-    <a href="{{ paginator.previous_page_path | relative_url }}">&larr;Newer</a>
-    <a href="{{ post.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next1">
-    <a href="{{ paginator.next_page_path | relative_url }}">Older&rarr;</a>
-    <a href="{{ paginator.next_page_path | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
 
 
 
