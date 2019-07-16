@@ -43,6 +43,7 @@ use-site-title: true
   {% assign new_title = paginator.previous_page_path | append: "#news" %}
     <h1>{{ new_title }}</h1>
     <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer Posts</a>
+    <a href="{{ new_title | relative_url }}">&larr; Newer Posts</a>
   </li>
   {% endif %}
   {% if paginator.next_page %}
@@ -50,6 +51,7 @@ use-site-title: true
   {% assign new_title = paginator.next_page_path| append: "#news" %}
     <h1>{{ new_title }}</h1>
     <a href="{{ paginator.next_page_path | relative_url }}">Older Posts &rarr;</a>
+    <a href="{{ new_title | relative_url }}">Older Posts &rarr;</a>
   </li>
   {% endif %}
 </ul>
