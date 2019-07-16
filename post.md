@@ -34,9 +34,6 @@ use-site-title: true
 </div>
 
 
-
-
-
 {% if paginator.total_pages > 1 %}
   {% if paginator.previous_page %}
 
