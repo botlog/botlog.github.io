@@ -84,14 +84,11 @@ use-site-title: true
 </div>
 
 
-
-
-
 {% if paginator.total_pages > 1 %}
   {% if paginator.previous_page %}
 
         <div class="form-row text-center" style="margin-bottom: 10px;">
-        <a href="{{ paginator.previous_page_path | relative_url }}" class="btn btn-primary btn-sm">[Read&nbsp;More]</a>
+        <a href="{{ paginator.previous_page_path#1 | relative_url#1 }}" class="btn btn-primary btn-sm">[Read&nbsp;More]</a>
         </div>
 
 
