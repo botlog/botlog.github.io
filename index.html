@@ -39,15 +39,13 @@ use-site-title: true
 {% if paginator.total_pages > 1 %}
 <ul class="pager main-pager">
   {% if paginator.previous_page %}
-  <li class="previous1">
-    <a href="{{ paginator.previous_page_path | relative_url }}">&larr;Newer</a>
-    <a href="{{ post.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
+  <li class="previous">
+    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer Posts</a>
   </li>
   {% endif %}
   {% if paginator.next_page %}
-  <li class="next1">
-    <a href="{{ paginator.next_page_path | relative_url }}">Older&rarr;</a>
-    <a href="{{ paginator.next_page_path | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
+  <li class="next">
+    <a href="{{ paginator.next_page_path | relative_url }}">Older Posts &rarr;</a>
   </li>
   {% endif %}
 </ul>
