@@ -40,6 +40,8 @@ use-site-title: true
 <ul class="pager main-pager">
   {% if paginator.previous_page %}
   <li class="previous">
+  {% assign new_title = paginator.previous_page_path | append: "#news" %}
+    <h1>{{ new_title }}</h1>
     <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer Posts</a>
   </li>
   {% endif %}
